@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+.wrapper{
+    display: flex;
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 100px;
+}
+.chracter-wrapper{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+    justify-content: space-between;
+}
+img{
+    max-height: 350px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header{
+    height: 100px;
+    background-color: darkred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header h1{
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-transform: uppercase;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 10;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.dialog {
+    padding: 50px;
+    position: fixed;
+    top: 20vh;
+    left: 30%;
+    width: 30%;
+    z-index: 100;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    margin: 0;
+    overflow: hidden;
+    background-color: white;
+}
+button{
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    font: inherit;
+    background-color: darkred;
+    border: 1px solid #660202;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-right: 0.5rem;
+    display: inline-block;
+}
+button:hover,
+button:active {
+    background-color: #660202;
+    border-color: #660202;
+}
+button.outline{
+    border-radius: 0;
+    min-width: 400px;
+    min-height: 100px;
+    background-color: transparent;
+    box-shadow: inset 0 0 rgb(102, 2, 2);
+    transition: all 0.3s ease-out;
+    color: rgb(0, 0, 0);
 }
 
-.App-link {
-  color: #61dafb;
+button.outline:hover {
+    box-shadow: inset 25em 0 darkred;
+    cursor: pointer;
+    color: white;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.close{
+    float: right;
+}
+.info{
+    padding: 0 150px;
+}
+.margin{
+    margin: 0 200px;
 }
