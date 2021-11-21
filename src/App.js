@@ -8,6 +8,7 @@ function App(props) {
     return (
         <div>
             <TheHeader/>
+            <GeneralInfo/>
             <CharactersList/>
         </div>
     );
