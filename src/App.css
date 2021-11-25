@@ -98,3 +98,13 @@ button.outline:hover {
 .margin{
     margin: 0 200px;
 }
+ul{
+    list-style: none;
+}
+.wrapper {
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    padding: 3rem;
+    margin: 2rem auto;
+    max-width: 40rem;
+}
