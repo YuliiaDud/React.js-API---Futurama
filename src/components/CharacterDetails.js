@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from "react-router-dom";
 import QuotesCounter from "./QuotesCounter";
 
 class CharacterDetails extends Component {
@@ -18,7 +19,9 @@ class CharacterDetails extends Component {
                     <h2>Home Planet: {chosenCharacter.homePlanet || "Unknown"}</h2>
                     <h2>Occupation: {chosenCharacter.occupation}</h2>
                     <h2>Quotes: <QuotesCounter quotesNumber={quotesNumber}/></h2>
-                    <button>Check out {chosenCharacter.name.first}'s quotes</button>
+                    <Link to="/quotes">
+                        <button>Check out {chosenCharacter.name.first}'s quotes</button>
+                    </Link>
                 </div>
             </div>
         );
